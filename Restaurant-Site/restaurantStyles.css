@@ -1,0 +1,42 @@
+body{
+  background-color: #4D2A2D;
+}
+ footer {
+  background-color: #550C18;
+  height: 100px;
+  text-align: center;
+  padding: 30px 10px 20px 10px;
+  /* color:#9F3517; */
+  color:black;
+}
+.jumbotron{
+  background-color: #550C18;
+}
+a.nav-link:link{
+  background-color: #4D2A2D;
+  /* color: #9F3517; */
+  color:black;
+  border-color: black;
+}
+a:hover{
+  font-weight: bold;
+}
+a:visited{
+  color:white;
+}
+header{
+  text-align: center;
+  /* color:black;#9F3517; */
+  color:black;
+  font-family: serif;
+}
+nav {
+  border-top: thin #5b7d87 solid;
+  border-bottom: thin #5b7d87 solid;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+}
+.content{
+  background-color: #9F3517;
+}

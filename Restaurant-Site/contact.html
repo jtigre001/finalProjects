@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta and link required for bootstrap-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <title>JJBurger</title>
+  <script type="text/javascript" src="restaurant.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="restaurantStyles.css" type="text/css"/>
+
+  <style>
+  @media (min-width: 500px) {
+  .jumbotron {
+    padding-bottom: 70px; // or whatever you want the value to be, such as 1rem.
+    }
+  }
+
+
+
+  input[type=radio]:checked {
+  color: black;
+}
+  .container{
+    padding-top: 10px;
+  }
+  #restName{
+    font-size: 2.8em;
+  }
+  a.nav-link:hover{
+    background-color: #4D2A2D;
+  }
+  </style>
+</head>
+<body>
+  <div class="content ">
+
+    <header class="jumbotron">
+      <h1 id="restName" style="color:black;"><strong>J&J Burgers</strong><br/>
+        New Location Opening Soon!
+      </h1>
+    </header>
+    <nav>
+      <ul class="nav nav-pills" >
+        <li class="nav-item"><a class="nav-link " href="index.html"><i class="fas fa-home"></i></a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="clear-float"></div>
+    </nav>
+
+
+
+    <div class="container">
+  <form class="form-horizontal" name="contactForm" onsubmit="return validate()">
+    <div class="form-group">
+      <strong><label class="control-label col-sm-4" for="name" id ="nameLabel" style="color:black;">Name:</label></strong>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="email">Email:</label>
+      <div class="col-sm-4">
+        <input  type="email" class="form-control" id="email" placeholder="Enter Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="phone" style="color:black;">Phone:</label>
+      <div class="col-sm-4">
+        <input  class="form-control" id="phone" placeholder="Enter Phone" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="inquiry" >Reason For Inquiry:</label>
+      <div class="col-sm-4">
+        <select id="inquiry" class="col-sm-12" required  >
+                <option value="catering" selected>Catering</option>
+                <option value="privateParty">Private Party</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-4" for="info">Additional Information:</label>
+      <div class="col-sm-4">
+        <textarea class="col-sm-12" id="info"></textarea>
+      </div>
+    </div>
+    <div class="form-group ">
+      <label class="control-label col-sm-4" for="history">Have you been to this restaurant?</label>
+      <div class="col-sm-4">
+        <label class="control-label " for="choice1"  >No</label>
+        <input type="radio" id="choice1" name="questionnaire" value="no" checked="checked">
+        <label class="control-label" for="choice2">Yes</label>
+        <input type="radio" id="choice2" name="questionnaire" value="yes">
+      </div>
+    </div>
+    <div class="form-group ">
+      <label class="control-label col-sm-4" for="contact">Best days to contact you:</label>
+      <div class="col-sm-4">
+        <input type="checkbox" id="M" name = "Monday" value="Monday">
+        <label class="cotrol-label" for="M">M</label>
+        <input type="checkbox" id="T" name="Tuesday" value="Tuesday">
+        <label class="cotrol-label"  for="T">T</label>
+        <input type="checkbox" id="W" name="Wednesday" value="Wednesday">
+        <label  class="cotrol-label"  for="W">T</label>
+        <input  type="checkbox" id="TH" name="Thursday" value="Thursday">
+        <label  class="cotrol-label"  for="TH">Th</label>
+        <input type="checkbox" id="F" name="Friday" value="Friday">
+        <label class="cotrol-label"  for="F">F</label>
+      </div>
+    </div>
+    <div class="form-group" onsubmit="return validate()">
+      <div class="col-sm-offset-5 col-sm-10">
+        <button  type="submit" class="btn btn-default">Send Request</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+  </div>
+  <hr/>
+  <footer class="footer">
+    <p>2510 Clinton Avenue South, Minneapolis, MN, 55404.<br/>
+      (612)447-5728</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  </body>
+</html>

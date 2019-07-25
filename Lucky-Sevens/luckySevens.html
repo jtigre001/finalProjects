@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="luckySevens.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <style>
+      .container{
+        font-family:"Comic Sans MS";
+        text-align:center;
+
+      }
+      .jumbotron {
+        background-color:white;
+        text-align:center;
+      }
+      h1 {
+        font-size: 5em;
+      }
+      #startBet{
+        width: 100%;
+        text-align:center;
+        font-size:1.5em;
+      }
+      #playBtn{
+        background-color: white;
+        border: solid;
+        color: black;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        border-width:2px;
+      }
+      #startingBet{
+        border-style:solid
+        background-image: url(images/money.png);
+      }
+      .table{
+        border-style:double;
+      }
+      #mon {
+        background-image: url(images/money.png);
+      }
+    </style>
+  </head>
+  <body onload ="start()">
+    <div class="container">
+      <header class="jumbotron">
+        <h1><strong>Lucky Sevens</strong></h1>
+      </header>
+      <form name="luckySevens" onsubmit="return dispEvents()" class="form-group" >
+
+
+      <div id="startBet">
+        <label for="startingBet" id="betLabel"> <strong>Starting Bet : </strong></label>
+        <span >$<input type="text" id="startingBet"></span>
+      </div>
+      <br/>
+      <div>
+        <button type="submit" id="playBtn"><strong>Play</strong></button>
+      </div>
+      </form>
+      <div style="display:none;" id="results">
+      <hr/>
+      <p><h1><strong>Results</strong></h1></p>
+      <table  class="table table-striped">
+        <tr>
+          <td>Staring Bet: </td>
+          <td><span>$<span id="showStartBet"></span></span></td>
+        </tr>
+        <tr>
+          <td>Total Rolls Before Going Broke: </td>
+          <td><span  id="numRolls"></span></td>
+        </tr>
+        <tr>
+          <td>Highest Amount Won: </td>
+          <td><span>$<span id="max"></span></span></td>
+        </tr>
+        <tr>
+          <td>Roll Count at Highest Amount Won: </td>
+          <td><span id="rollCountAtMax"></span></td>
+        </tr>
+      </table>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
